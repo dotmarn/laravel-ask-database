@@ -20,19 +20,25 @@ DB::ask('How many users do we have on the "pro" plan?');
 You can install the package via composer:
 
 ```bash
-composer require beyondcode/laravel-ask-database
+composer require dotmarn/laravel-ask-database
 ```
 
-You can publish the config file with:
+Publish the config files with:
 
 ```bash
 php artisan vendor:publish --tag="ask-database-config"
+php artisan vendor:publish --provider="OpenAI\Laravel\ServiceProvider"
 ```
 
 This is the contents of the published config file:
 
 ```php
 return [
+    /**
+     * The OpenAI model to use:
+     * "gpt-3.5-turbo-instruct" - The new default model.
+     */
+    'model' => env('ASK_DATABASE_MODEL', 'gpt-3.5-turbo-instruct'),
     /**
      * The database connection name to use. Depending on your
      * use case, you might want to limit the database user
