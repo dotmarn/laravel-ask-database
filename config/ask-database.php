@@ -2,6 +2,11 @@
 
 return [
     /**
+     * The OpenAI model to use:
+     * "gpt-3.5-turbo-instruct" - The new default model.
+     */
+    'model' => env('ASK_DATABASE_MODEL', 'gpt-3.5-turbo-instruct'),
+    /**
      * The database connection name to use. Depending on your
      * use case, you might want to limit the database user
      * to have read-only access to the database.

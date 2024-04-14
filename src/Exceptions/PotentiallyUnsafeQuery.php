@@ -1,6 +1,6 @@
 <?php
 
-namespace BeyondCode\Oracle\Exceptions;
+namespace Dotmarn\Oracle\Exceptions;
 
 use Exception;
 

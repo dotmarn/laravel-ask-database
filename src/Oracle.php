@@ -1,8 +1,8 @@
 <?php
 
-namespace BeyondCode\Oracle;
+namespace Dotmarn\Oracle;
 
-use BeyondCode\Oracle\Exceptions\PotentiallyUnsafeQuery;
+use Dotmarn\Oracle\Exceptions\PotentiallyUnsafeQuery;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Str;
@@ -49,7 +49,7 @@ class Oracle
     protected function queryOpenAi(string $prompt, string $stop, float $temperature = 0.0)
     {
         $completions = $this->client->completions()->create([
-            'model' => 'text-davinci-003',
+            'model' => config('ask-database.model'),
             'prompt' => $prompt,
             'temperature' => $temperature,
             'max_tokens' => 100,

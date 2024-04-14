@@ -91,7 +91,7 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
 ## Credits
 
-- [Marcel Pociot](https://github.com/dotmarn)
+- [Ridwan Kasim](https://github.com/dotmarn)
 - [All Contributors](../../contributors)
 
 ## License
